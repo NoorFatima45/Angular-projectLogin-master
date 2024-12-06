@@ -1,0 +1,53 @@
+<div class="main" *ngIf="!orderSubmitted">
+    <h1>Place Your Order Here!</h1>
+    <form id="orderForm" (submit)="submitForm($event)">
+        <fieldset>
+            <legend><div class="number">1</div> Your Info:</legend>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="user_name" placeholder="Enter your name"><br>
+            
+            <label for="mail">Email:</label><br>
+            <input type="email" id="mail" name="user_email" placeholder="Enter your email"><br>
+            
+            <label for="phone">Phone:</label><br>
+            <input type="tel" id="phone" name="user_tel" placeholder="Enter your phone number"><br>
+            
+            <label for="address">Address:</label><br>
+            <textarea id="address" name="user_address" placeholder="Enter your address"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend><div class="number">3</div> Filling Choice:</legend>
+            <input type="radio" id="mince" name="filling"><label for="mince">Meatless Mince</label>
+            <input type="radio" id="lentils" name="filling"><label for="lentils">Lentils</label>
+        </fieldset>
+
+        <fieldset>
+            <legend><div class="number">4</div> Your Sides:</legend>
+            <input type="radio" id="bread" name="side"><label for="bread">Garlic Bread</label>
+            <input type="radio" id="nobread" name="side"><label for="nobread">No Garlic Bread</label><br>
+            <input type="checkbox" id="glutenfree_side" name="glutenfree_side"><label for="glutenfree_side">Gluten Free?</label>
+        </fieldset>
+
+        <fieldset>
+            <legend><div class="number">5</div> Extra Fillings:</legend>
+            <input type="checkbox" id="mushrooms" name="mushrooms"><label for="mushrooms">Mushrooms</label><br>
+            <input type="checkbox" id="onions" name="onions"><label for="onions">Onions</label><br>
+            <input type="checkbox" id="carrots" name="carrots"><label for="carrots">Carrots</label><br>
+            <input type="checkbox" id="celery" name="celery"><label for="celery">Celery</label><br>
+            <input type="checkbox" id="peas" name="peas"><label for="peas">Peas</label><br>
+        </fieldset>
+
+        <fieldset>
+            <legend><div class="number">6</div> Any Allergies/Special Requests:</legend>
+            <textarea id="specialRequests" name="special_requests" placeholder="Enter any special requests"></textarea>
+        </fieldset>
+
+        <input class="button" type="submit" value="Give me Food!">
+    </form>
+</div>
+
+<div class="order" *ngIf="orderSubmitted">
+    <h1>Thanks for your order!</h1>
+    <img src="https://i.imgur.com/O0oqbwc.jpg" alt="Order confirmation image">
+</div>

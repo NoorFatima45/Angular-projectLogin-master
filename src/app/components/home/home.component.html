@@ -1,3 +1,225 @@
-  <div class="container">
-  <button class="btn btn-primary" (click)="logOut()">Log Out</button>
+<main id="content-holder">
+  <section class="landing" id="landing">
+    <div class="holder">
+      <div class="grid">
+        <div class="col-7 intro">
+          <span>Welcome to our</span>
+          <h1 class="intro-text">Delicious food collection!</h1>
+          <p>The restaurant is an organic space reflective of our Head Chef's nature inspired cuisine. The interplay of textures and colour brings life and a vibrance that embraces the restaurant’s place. An ode to the Asian landscape, from
+            the vast ocean floor, to the cracked bark of a paperbark tree, every detail from the ground up has been thoughtfully considered.</p>
+          <div class="cta-holder">
+            <a href="#menu" class="button-cta"><img src="forkknife.png" alt="fork image"></a>
+            <span routerLink="/menu">Explore Our Menu</span>
+          </div>
+        </div>
+        <div class="col-5 image-holder">
+          <img src="noodle.png" alt="noodle image">
+          <div class="offer">
+            <p>50% <span>off</span></p>
+          </div>
+          <div class="product-details">
+            <p>Ramen Instant Noodle</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="showcase">
+    <div class="holder">
+      <div class="grid">
+        <div class="col-4 showcase-item">
+          <div class="image-holder">
+            <img src="pastahome.png" alt="pasta plate">
+          </div>
+          <div class="desc">
+            <span>TASTY</span>
+            <p>Homemade Pasta</p>
+          </div>
+        </div>
+        <div class="col-4 showcase-item">
+          <div class="image-holder">
+            <img src="noodle home.png" alt="noodle plate">
+          </div>
+          <div class="desc">
+            <span>TASTY</span>
+            <p>Homemade Noodles</p>
+          </div>
+        </div>
+        <div class="col-4 showcase-item">
+          <div class="image-holder">
+            <img src="pizzahome.png" alt="pizza on pan">
+          </div>
+          <div class="desc">
+            <span>TASTY</span>
+            <p>Homemade Pizza</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="holder">
+      <div class="grid">
+        <div class="col-5 image-holder">
+          <img src="foods.png" alt="vegetable plate with peas and avocado">
+        </div>
+        <div class="col-7 about-desc">
+          <span>About us</span>
+          <h2>we make yummy food in the market</h2>
+          <p>We are a subsidiary of Nil Brands, one of the largest resturant brands in Asia. We had sales of $15 million in 2019. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, eum pariatur dolores minus harum cum hic, tenetur
+            voluptatem illo facilis deserunt fuga beatae ut voluptatibus voluptate repellat officia velit animi ipsa, aliquam molestiae suscipit. Iste veritatis architecto dolorem temporibus mollitia aliquid incidunt vel totam laborum
+            consequuntur. Maiores necessitatibus repellendus facere laborum magnam adipisci similique laboriosam, iusto est odio suscipit error?</p>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="holder">
+      <h2>our services</h2>
+      <div class="grid">
+        <div class="col-3">
+          <div class="card">
+            <div class="card-body">
+              <img src="tray.svg" alt="tray icon">
+              <h3>Catering</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit sit, incidunt laudantium quas vel consectetur.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card">
+            <div class="card-body">
+              <img src="fast-food.svg" alt="fast food icon">
+              <h3>Food Truck</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit sit, incidunt laudantium quas vel consectetur.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card">
+            <div class="card-body">
+              <img src="french-fries.svg" alt="french fries icon">
+              <h3>Buffet</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit sit, incidunt laudantium quas vel consectetur.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card">
+            <div class="card-body">
+              <img src="car.svg" alt="burger car icon">
+              <h3>Delivery</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit sit, incidunt laudantium quas vel consectetur.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="menu">
+    <div class="holder">
+      <h2>our best menu</h2>
+      <div class="grid">
+        <div class="col-3">
+          <div class="card">
+            <div class="card-image-holder">
+              <img src="Spicy.avif" alt="spicy ramen image">
+            </div>
+            <div class="name">
+              <h3>Spicy Ramen</h3>
+            </div>
+            <div class="basic-info">
+              <span>$12.50</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card">
+            <div class="card-image-holder">
+              <img src="Roasted.avif" alt="rosted ribs image">
+            </div>
+            <div class="name">
+              <h3>Roasted Ribs</h3>
+            </div>
+            <div class="basic-info">
+              <span>$12.50</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card">
+            <div class="card-image-holder">
+              <img src="sushi.avif" alt="Sushi">
+            </div>
+            <div class="name">
+              <h3>Sushi</h3>
+            </div>
+            <div class="basic-info">
+              <span>$12.50</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card">
+            <div class="card-image-holder">
+              <img src="pastasoup.avif" alt="pastasoup image">
+            </div>
+            <div class="name">
+              <h3>Pasta Soup</h3>
+            </div>
+            <div class="basic-info">
+              <span>$12.50</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+<!-- Footer -->
+<div class="footer">
+  <div class="container flex">
+    <div class="footer-category">
+      <h2>Our Menu</h2>
+      <ul>
+        <li>Biryani</li>
+        <li>Chicken</li>
+        <li>Pizza</li>
+        <li>Burger</li>
+        <li>Pasta</li>
+      </ul>
+    </div>
+
+    <div class="quick-links">
+      <h2>Quick Links</h2>
+
+      <ul>
+        <li>About </li>
+        <li>Contact Us</li>
+        <li>Menu</li>
+        <li>Order</li>
+        <li>Services</li>
+      </ul>
+    </div>
+
+    <div class="get-in-touch">
+      <h2>Get in touch</h2>
+      <ul>
+        <li>Account</li>
+        <li>Support Center</li>
+        <li>Feedback</li>
+        <li>Suggession</li>
+      </ul>
+    </div>
+    
+  </div>
+  <button class="btne btn-primary" (click)="logOut()">Log Out</button>
+  <div class="copyright">
+    <p>Copyright &copy; 2022. All Rights Reserved.</p>
+  </div>
 </div>
+<!-- End Footer -->

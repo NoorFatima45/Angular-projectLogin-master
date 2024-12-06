@@ -14,8 +14,15 @@ import { HomeComponent } from './components/home/home.component';
 import { MatIconModule } from '@angular/material/icon';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MenuComponent } from './components/menu/menu.component';
-import { HeaderComponent } from './components/header/header.component'; 
-
+import { HeaderComponent } from './components/header/header.component';
+import { OrderComponent } from './components/order/order.component'; 
+import { CommonModule } from '@angular/common';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatInputModule } from '@angular/material/input';
+import { IonicModule } from '@ionic/angular';
+import { AboutComponent } from './components/about/about.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +31,8 @@ import { HeaderComponent } from './components/header/header.component';
     HomeComponent,
     MenuComponent,
     HeaderComponent,
+    OrderComponent,
+    AboutComponent,
   
     
   ],
@@ -32,14 +41,20 @@ import { HeaderComponent } from './components/header/header.component';
     AppRoutingModule,
     ReactiveFormsModule,
     MatIconModule,
-    
+    CommonModule,
+    MatButtonModule,
+    MatCardModule,
+    MatToolbarModule,
+    MatInputModule,
+    IonicModule,
   ],
   providers: [
     // Uncomment if using Angular Universal
     // provideClientHydration(),
     AuthService,
     provideHttpClient(withFetch()),
-    provideAnimationsAsync()  // Use the new provideHttpClient with fetch
+    provideAnimationsAsync(),
+    provideAnimationsAsync('noop')  // Use the new provideHttpClient with fetch
   ],
   bootstrap: [AppComponent]
 })

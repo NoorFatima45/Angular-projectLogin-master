@@ -1,123 +1,113 @@
-<div class="container">
-<p class="text-center fs-3" 
-   [ngClass]="isAccountCreated ? 'text-success pb-1' : 'text-danger p-1'">
-   {{ displayMsg }}
-</p>
+<div class="form-container">
+    <p class="text-center fs-3" [ngClass]="isAccountCreated ? 'text-success pb-1' : 'text-danger p-1'">
+        {{ displayMsg }}
+    </p>
 
-
-<form [formGroup]="registerForm" (ngSubmit)="registerSubmited()" class="border p-3 rounded-3">
-    <div class="row">
-      <div class="col text-center p-2 mb-3 bg-light">
-         <span class="fs-3">Register</span>
-      </div>
-    </div>
-    <div class="row">
-        <div class="col mb-3">
-            <label for="firstname" class="form-label">First Name</label>
-           <input type="text" id="firstname" class="form-control" formControlName="firstname">
-           
-           <div class="form-text text-danger" *ngIf="FirstName.errors?.['required'] && (FirstName.touched|| FirstName.dirty)">
-            First Name is Required.
-           </div>
-           <div class="form-text text-danger" *ngIf="FirstName.errors?.['pattern'] && (FirstName.touched|| FirstName.dirty)">
-             Name should start with alphabet.
-           </div>
+    <form [formGroup]="registerForm" (ngSubmit)="registerSubmited()" class="login-box p-4 rounded-4">
+        <div class="login-header">
+            <span>Register</span>
         </div>
-
-        <div class="col mb-3">
-            <label for="lastname" class="form-label">Last Name</label>
-           <input type="text" id="lastname" class="form-control" formControlName="lastname" >
-           <div class="form-text text-danger" *ngIf="LastName.errors?.['required'] && (LastName.touched|| LastName.dirty)">
-           Last Name is Required.
-           </div>
-           <div class="form-text text-danger" *ngIf="LastName.errors?.['pattern'] && (LastName.touched|| LastName.dirty)">
-            Name should start with alphabet.
-           </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col mb-3">
-            <label for="email" class="form-label">Email address</label>
-           <input type="email" id="email" class="form-control"  formControlName="email">
-           <div class="form-text text-danger" *ngIf="Email.errors?.['required'] && (Email.touched|| Email.dirty)">
-            Email is Required.
+        <div class="row pt-4 mt-4">
+            <div class="col  mb-3">
+                <label for="firstname" class="label">First Name</label>
+                <input type="text" id="firstname" class="input-field" formControlName="firstname" required>
+                <div class="form-text text-danger" *ngIf="FirstName.errors?.['required'] && (FirstName.touched || FirstName.dirty)">
+                    First Name is Required.
+                </div>
+                <div class="form-text text-danger" *ngIf="FirstName.errors?.['pattern'] && (FirstName.touched || FirstName.dirty)">
+                    Name should start with an alphabet.
+                </div>
             </div>
-            <div class="form-text text-danger" *ngIf="Email.errors?.['email'] && (Email.touched|| Email.dirty)">
-                Email is invalid.
-               </div>
-        </div>
-    </div>  
-    <div class="row">
-        <div class="col mb-3">
-            <label for="mobile" class="form-label">Mobile Number</label>
-           <input type="text" id="mobile" class="form-control" formControlName="mobile">
-           <div class="form-text text-danger" *ngIf="Mobile.errors?.['required'] && (Mobile.touched|| Mobile.dirty)">
-         Number is Required.
-            </div>
-            <div class="form-text text-danger" *ngIf="Mobile.errors?.['pattern'] && (Mobile.touched|| Mobile.dirty)">
-                 Number  is invalid.
-               </div>
-               <div class="form-text text-danger" *ngIf="Mobile.errors?.['minlength'] && (Mobile.touched|| Mobile.dirty)">
-                Number  is short.
-              </div>
-              <div class="form-text text-danger" *ngIf="Mobile.errors?.['maxlength'] && (Mobile.touched|| Mobile.dirty)">
-                Number  is long.
-              </div>
-        </div>
-        <div class="col ps-3 mb-3">
-         <div class="m-1">Gender</div>
-         <div class="form-check form-check-inline">
-            <input type="radio" class="form-check-input" value="m" id="male"  formControlName="gender">
-            <label class="form-check-label" for="male">Male</label>
-         </div>
-         <div class="form-check form-check-inline">
-            <input type="radio" class="form-check-input" value="f" id="female" formControlName="gender">
-            <label class="form-check-label" for="female">Female</label>
-         </div>
 
-        <div class="form-text text-danger" *ngIf="Gender.errors?.['required'] && (Gender.touched|| Gender.dirty)">
-          Select Gender.
+            <div class="col mb-3">
+                <label for="lastname" class="label">Last Name</label>
+                <input type="text" id="lastname" class="input-field" formControlName="lastname" required>
+                <div class="form-text text-danger" *ngIf="LastName.errors?.['required'] && (LastName.touched || LastName.dirty)">
+                    Last Name is Required.
+                </div>
+                <div class="form-text text-danger" *ngIf="LastName.errors?.['pattern'] && (LastName.touched || LastName.dirty)">
+                    Name should start with an alphabet.
+                </div>
             </div>
         </div>
-    </div> 
-    <div class="row">
-        <div class="col mb-3">
-            <label for="pwd" class="form-label">Password </label>
-           <input type="password" id="pwd" class="form-control"  formControlName="pwd">
-           <div class="form-text text-danger" *ngIf="PWD.errors?.['required'] && (PWD.touched|| PWD.dirty)">
-            Password is Required.
-               </div>
-               <div class="form-text text-danger" *ngIf="PWD.errors?.['pattern'] && (PWD.touched|| PWD.dirty)">
-                  Password is invalid.
-                  </div>
-                  <div class="form-text text-danger" *ngIf="PWD.errors?.['maxlength'] || PWD.errors?.['minlength']  && (PWD.touched|| PWD.dirty)">
-                    Password should be at least 6 and at the max 15 characters long.
-                 </div>
-                 
-        </div>
-        <div class="col mb-3">
-            <label for="rpwd" class="form-label">Repeat Password </label>
-           <input type="password" id="rpwd" class="form-control" formControlName="rpwd">
-           <div class="form-text text-danger" [ngStyle]="{'display': repeatPass}">
-            Repeat Password is invalid.
-               </div>
-               
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-6 offset-3 ">
-            <div class="d-grid">
-                <button type="submit" [disabled]="registerForm.invalid" class="btn btn-primary">Submit</button>
+        <div class="row">
+            <div class="col mb-3">
+                <label for="email" class="label">Email address</label>
+                <input type="email" id="email" class="input-field" formControlName="email" required>
+                <div class="form-text text-danger" *ngIf="Email.errors?.['required'] && (Email.touched || Email.dirty)">
+                    Email is Required.
+                </div>
+                <div class="form-text text-danger" *ngIf="Email.errors?.['email'] && (Email.touched || Email.dirty)">
+                    Email is invalid.
+                </div>
             </div>
         </div>
-    </div>
-    <div class="row">
-      <div class="col mt-3">
-          <span class="me-2">Already have account?</span>
-          <a routerLink="/login">
-      Login
-          </a>
-      </div>
-      </div>
-</form>
+        <div class="row">
+            <div class="col mb-3">
+                <label for="mobile" class="label">Mobile Number</label>
+                <input type="text" id="mobile" class="input-field" formControlName="mobile" required>
+                <div class="form-text text-danger" *ngIf="Mobile.errors?.['required'] && (Mobile.touched || Mobile.dirty)">
+                    Number is Required.
+                </div>
+                <div class="form-text text-danger" *ngIf="Mobile.errors?.['pattern'] && (Mobile.touched || Mobile.dirty)">
+                    Number is invalid.
+                </div>
+                <div class="form-text text-danger" *ngIf="Mobile.errors?.['minlength'] && (Mobile.touched || Mobile.dirty)">
+                    Number is short.
+                </div>
+                <div class="form-text text-danger" *ngIf="Mobile.errors?.['maxlength'] && (Mobile.touched || Mobile.dirty)">
+                    Number is long.
+                </div>
+            </div>
+            <div class="col ps-3 mb-3">
+                <div class="m-1">Gender</div>
+                <div class="form-check form-check-inline">
+                    <input type="radio" class="form-check-input" value="m" id="male" formControlName="gender" required>
+                    <label class="form-check-label" for="male">Male</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="radio" class="form-check-input" value="f" id="female" formControlName="gender" required>
+                    <label class="form-check-label" for="female">Female</label>
+                </div>
+                <div class="form-text text-danger" *ngIf="Gender.errors?.['required'] && (Gender.touched || Gender.dirty)">
+                    Select Gender.
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col mb-3">
+                <label for="pwd" class="label">Password</label>
+                <input type="password" id="pwd" class="input-field" formControlName="pwd" required>
+                <div class="form-text text-danger" *ngIf="PWD.errors?.['required'] && (PWD.touched || PWD.dirty)">
+                    Password is Required.
+                </div>
+                <div class="form-text text-danger" *ngIf="PWD.errors?.['pattern'] && (PWD.touched || PWD.dirty)">
+                    Password is invalid.
+                </div>
+                <div class="form-text text-danger" *ngIf="(PWD.errors?.['maxlength'] || PWD.errors?.['minlength']) && (PWD.touched || PWD.dirty)">
+                    Password should be at least 6 and at most 15 characters long.
+                </div>
+            </div>
+            <div class="col mb-3">
+                <label for="rpwd" class="label">Repeat Password</label>
+                <input type="password" id="rpwd" class="input-field" formControlName="rpwd" required>
+                <div class="form-text text-danger" [ngStyle]="{'display': repeatPass}">
+                    Repeat Password is invalid.
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 offset-3">
+                <div class="d-grid">
+                    <button type="submit" [disabled]="registerForm.invalid" class="input-submit">Submit</button>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="account">
+            <div class="col mt-3 text-center">
+                <span class="me-2">Already have an account?</span>
+                <a routerLink="/login">Login</a>
+            </div>
+        </div>
+    </form>
 </div>

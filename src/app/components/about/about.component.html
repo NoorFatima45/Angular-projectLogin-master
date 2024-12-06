@@ -1,0 +1,71 @@
+<header>
+    <!-- Logo -->
+    <a href="#" class="logo">
+      <img src="restaurantlogo.png" alt="restaurantlogo ">
+    </a>
+    <!-- Menu Links -->
+    <ul class="menu">
+      <li><a routerLink="/">Home</a></li>
+      <li><a routerLink="/menu">Menu</a></li>
+      <li><a routerLink="/about">About</a></li>
+      <li><a routerLink="/order">Order</a></li>
+    </ul>
+    <!-- Menu Icons -->
+    <label for="menu-show"><i class="fas fa-bars" aria-label="Menu"></i></label>
+    <label for="menu-show"><i class="fas fa-times" aria-label="Close Menu"></i></label>
+  </header>
+  
+  <!-- Image Slide Radio -->
+  <input type="radio" id="burger" name="rd" checked>
+  <label for="burger"></label>
+  
+  <input type="radio" id="fries" name="rd">
+  <label for="fries"></label>
+  
+  <input type="radio" id="coke" name="rd">
+  <label for="coke"></label>
+  
+  <!-- Container -->
+  <div class="container">
+    <!-- Text -->
+    <div class="text-box">
+      <h2><span>Enjoyable lunch <br>It's Food</span></h2>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque fuga nobis nihil libero eveniet aperiam ex repudiandae praesentium quaerat cum excepturi, quas fugit. Et odio repudiandae ea quibusdam vero consectetur, nemo, ullam perspiciatis laudantium obcaecati.</p>
+      <a routerLink="/menu" class="btn" (click)="onOrderNow()">Order Now</a>
+    </div>
+    <!-- Images -->
+    <div class="bg-img">
+      <img src="burgerabout.png" alt="Burger">
+      <img src="friesabout.png" alt="Fries">
+      <img src="cokeabout.png" alt="Coke">
+    </div>
+  </div>
+  
+  <!-- Image Slide -->
+  <ul class="thumb">
+    <li><label for="burger"><img src="burgerabout.png" alt="Burger Image"></label></li>
+    <li><label for="fries"><img src="friesabout.png" alt="Fries Image"></label></li>
+    <li><label for="coke"><img src="cokeabout.png" alt="Coke Image"></label></li>
+  </ul>
+  
+  <!-- Shapes -->
+  <div class="shape red"></div>
+  <div class="shape yellow"></div>
+  <div class="shape orange"></div>
+  
+  <!-- Footer -->
+  <footer>
+    <!-- Social Icons -->
+    <div class="social">
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-square"></i></a>
+      <a href="#" aria-label="Twitter"><i class="fab fa-twitter-square"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram-square"></i></a>
+      <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <!-- Credit Text -->
+    <div class="credit">
+      <p>Copyright &copy; 2021 - Food lover</p>
+      <p>Designed & Developed </p>
+    </div>
+  </footer>
+  

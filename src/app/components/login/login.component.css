@@ -1,9 +1,140 @@
-form{
-    width: 500px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
-.container{
+
+/* ===== BODY - BACKGROUND IMAGE ===== */
+body {
+    background: #9a90f5;
+}
+
+/* ===== Reusable CSS ===== */
+a {
+    text-decoration: none;
+    color: #6657f4;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===== WRAPPER ===== */
+.wrapper {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+.login-box {
+    position: relative;
+    width: 450px;
+    max-width: 90%;
+    border: 3px solid #6657f4;
+    border-radius: 15px;
+    padding: 7.5em 2.5em 4em 2.5em;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== HEADER ===== */
+.login-header {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #6657f4;
+    width: 140px;
+    height: 70px;
+    border-radius: 0 0 20px 20px;
+}
+
+.login-header span {
+    font-size: 30px;
+    color: black;
+}
+
+.input-field {
+    width: 100%;
+    height: 55px;
+    font-size: 16px;
+    padding: 0 20px;
+    border: 2px solid #6657f4;
+    border-radius: 30px;
+    outline: none;
+  
+}
+
+.form-text {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* ===== Submit Button ===== */
+.input-submit {
+    width: 100%;
+    height: 50px;
+    background: #6657f4;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.d-grid {
+    width: 100%;
+}
+
+.input-submit:hover {
+    background: #1d0db2;
+}
+
+/* ===== Responsive Design Adjustments ===== */
+@media only screen and (max-width: 1024px) {
+    .wrapper {
+        padding: 50px;
+    }
+    .login-box {
+        width: 80%;
+        padding: 5em 1.5em 3em 1.5em;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .login-box {
+        width: 90%;
+        padding: 6em 1.5em 3em 1.5em;
+    }
+    .login-header span {
+        font-size: 24px;
+    }
+    .input-field, .input-submit {
+        height: 45px;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .wrapper {
+        padding: 15px;
+    }
+    .login-box {
+        width: 100%;
+        padding: 6em 1em 3em 1em;
+    }
+    .login-header span {
+        font-size: 20px;
+    }
+    .input-field, .input-submit {
+        height: 40px;
+        font-size: 13px;
+    }
 }

@@ -6,6 +6,8 @@ import { HomeComponent } from './components/home/home.component';
 import { authGuard } from './services/auth.guard';
 import { MenuComponent } from './components/menu/menu.component';
 import { loginGuard } from './services/login.guard';
+import { OrderComponent } from './components/order/order.component';
+import { AboutComponent } from './components/about/about.component';
 
 
 
@@ -33,6 +35,16 @@ const routes: Routes = [
   {
     path:'menu',
     component:MenuComponent,
+    canActivate:[authGuard]
+  },
+  {
+    path:'about',
+    component:AboutComponent,
+    canActivate:[authGuard]
+  },
+  {
+    path:'order',
+    component:OrderComponent,
     canActivate:[authGuard]
   },
 ];

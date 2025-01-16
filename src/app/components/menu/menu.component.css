@@ -2,7 +2,7 @@
 .carousel-item img {
     height: 450px;
     object-fit: cover;
-    background-position: center; /* Center the image within the container */
+    background-position: center; 
   background-repeat: no-repeat;
   }
   
